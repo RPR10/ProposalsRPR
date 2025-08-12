@@ -6,8 +6,8 @@ const SHEET_CSV_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vR-GykVMcX-O9F6ys0khgcLwc2k-k9XCcGjODiwl9ax837yImNk9bilKfKKElTCRFMESe7N9Mc736wR/pub?output=csv";
 
 // Where local assets live (use filenames in the Sheet; full URLs still work)
-const PDF_BASE_PATH   = "/assets/pdfs/";
-const THUMB_BASE_PATH = "/assets/thumbs/";
+const PDF_BASE_PATH   = "./assets/pdfs/";
+const THUMB_BASE_PATH = "./assets/thumbs/";
 
 /* ==========
    DATA + STATE
