@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PublicFinance.lk | Budget Proposal Library</title>
+  <meta name="description" content="A structured, searchable library of budget proposals by PublicFinance.lk to support meaningful public participation." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="pf-topbar">
+    <div class="pf-topbar__inner">
+      <a href="#" class="pf-brand">
+        <img src="assets/images/publicfinance-logo.png" alt="PublicFinance.lk" class="pf-brand__img">
+      </a>
+      <span class="pf-title">The Budget Proposal Hub by PublicFinance.lk</span>
+      <div class="pf-actions">
+        <a href="https://publicfinance.lk" class="pf-btn">Back to main site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blue Hero Header -->
+  <header class="site-header">
+    <div class="hero">
+      <h1>Where Public Participation Meets the National Budget</h1>
+      <p>
+        Welcome to <strong>The Budget Proposal Hub</strong> — your central access point for
+        all budget proposals developed by PublicFinance.lk. For years, we’ve advocated for
+        meaningful public participation in shaping Sri Lanka’s budget. Now, we’re putting our
+        words into action. Explore clear, evidence-based proposals designed to spark change
+        — and see how your voice can make a difference.
+      </p>
+    </div>
+  </header>
+    
+
+  <!-- Controls -->
+  <section class="controls" aria-label="Search and filter proposals">
+    <div class="field">
+      <label class="label" for="q">Search for proposals</label>
+      <input class="input" id="q" type="search" placeholder="e.g. customs single window, school meals, roads…" autocomplete="off" />
+    </div>
+  
+    <div class="field">
+      <label class="label" for="cat-toggle">Categories (select one or more)</label>
+    
+      <!-- Hidden native select (kept for semantics; not used for UI) -->
+      <select id="cat" class="input" multiple style="display:none;"></select>
+    
+      <!-- Custom multi-select dropdown -->
+      <div class="ms" id="cat-ms">
+        <button type="button" id="cat-toggle" class="ms-toggle input" aria-haspopup="listbox" aria-expanded="false">
+          All categories
+        </button>
+        <div class="ms-menu" role="listbox" aria-label="Categories"></div>
+      </div>
+    </div>
+
+  </section>  
+
+  <main class="container">
+    <div id="results" class="grid" aria-live="polite" aria-busy="false"></div>
+    <div id="empty" class="empty" role="status" style="display:none">
+      No proposals match your search or filters. Try a different keyword or clear filters.
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="y"></span> PublicFinance.lk — a Verité Research initiative</div>
+      <div><a class="footer-link" href="mailto:info@publicfinance.lk">checkonthis@publicfinance.lk</a></div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
